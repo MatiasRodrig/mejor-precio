@@ -16,16 +16,23 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
+import AddHomeIcon from '@mui/icons-material/AddHome';
+import AddBusinessIcon from '@mui/icons-material/AddBusiness';
+import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
+import GroupsIcon from '@mui/icons-material/Groups';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import InfoIcon from '@mui/icons-material/Info';
+
 
 
 const routes = [
-  { label: 'Inicio', path: '/' },
-  { label: 'Perfil', path: '/profile' },
-  { label: 'Mercados', path: '/mercados' },
-  { label: 'Colonias', path: '/colonias' },
-  { label: 'Precios', path: '/precios' },
-  { label: 'Contacto', path: '/contact' },
-  { label: 'Información', path: '/about' },
+  { label: 'Inicio', path: '/', icon: <MenuIcon/> },
+  { label: 'Perfil', path: '/profile', icon: <AccessibilityNewIcon/> },
+  { label: 'Mercados', path: '/mercados', icon: <AddBusinessIcon/> },
+  { label: 'Colonias', path: '/colonias', icon: <GroupsIcon/> },
+  { label: 'Precios', path: '/precios', icon: <MonetizationOnIcon/> },
+  { label: 'Contacto', path: '/contact', icon: <MailIcon/> },
+  { label: 'Información', path: '/about', icon: <InfoIcon/> },
 ];
 
 
@@ -50,7 +57,8 @@ const drawer = (
         <ListItem key={route.label} disablePadding>
           <ListItemButton component={Link} to={route.path}>
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+            
+             {index.map}
             </ListItemIcon>
             <ListItemText primary={route.label} />
           </ListItemButton>
