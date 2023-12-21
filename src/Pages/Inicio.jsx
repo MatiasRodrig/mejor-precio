@@ -15,6 +15,19 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
+
+
+const routes = [
+  { label: 'Inicio', path: '/' },
+  { label: 'Perfil', path: '/profile' },
+  { label: 'Mercados', path: '/mercados' },
+  { label: 'Colonias', path: '/colonias' },
+  { label: 'Precios', path: '/precios' },
+  { label: 'Contacto', path: '/contact' },
+  { label: 'Información', path: '/about' },
+];
+
 
 const drawerWidth = 240;
 
@@ -28,38 +41,25 @@ function Inicio(props) {
     setMobileOpen(!mobileOpen);
   };
 
-  const drawer = (
-    <div>
-      <Toolbar />
-      <Divider />
-      <List>
-        {['Bandeja de entrada', 'Destacados', 'Enviar correo', 'Borradores'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['Todos los correos', 'Papelera', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </div>
-  );
-
+const drawer = (
+  <div>
+    <Toolbar />
+    <Divider />
+    <List>
+      {routes.map((route, index) => (
+        <ListItem key={route.label} disablePadding>
+          <ListItemButton component={Link} to={route.path}>
+            <ListItemIcon>
+              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+            </ListItemIcon>
+            <ListItemText primary={route.label} />
+          </ListItemButton>
+        </ListItem>
+      ))}
+    </List>
+    <Divider />
+  </div>
+);
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />

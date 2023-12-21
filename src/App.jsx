@@ -11,7 +11,7 @@ function App() {
   const router = createBrowserRouter([
 
     {
-      label: 'Inicio', path: '/', element: <Inicio/>
+      label: 'Inicio', path: '*', element: <Inicio/>
     },
     { label: 'Perfil', path: '/profile' },
     { label: 'Mercados', path: '/mercados', element: <Mercados/> },
