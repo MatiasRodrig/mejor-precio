@@ -40,7 +40,7 @@ const drawerWidth = 240;
 
 
 
-function Colonias(props) {
+function Contacto(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -89,7 +89,7 @@ const drawer = (
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Colonias
+            Contacto
           </Typography>
         </Toolbar>
       </AppBar>
@@ -132,4 +132,4 @@ const drawer = (
   );
 }
 
-export default Colonias;
+export default Contacto;

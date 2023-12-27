@@ -24,9 +24,8 @@ import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import InfoIcon from '@mui/icons-material/Info';
 
 
-
 const routes = [
-  { label: 'Inicio', path: '/', icon: <MenuIcon/> },
+  { label: 'Inicio', path: '/', icon: <AddHomeIcon/> },
   { label: 'Perfil', path: '/profile', icon: <AccessibilityNewIcon/> },
   { label: 'Mercados', path: '/mercados', icon: <AddBusinessIcon/> },
   { label: 'Colonias', path: '/colonias', icon: <GroupsIcon/> },
@@ -36,11 +35,12 @@ const routes = [
 ];
 
 
+
 const drawerWidth = 240;
 
 
 
-function Inicio(props) {
+function Mercados(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -57,8 +57,7 @@ const drawer = (
         <ListItem key={route.label} disablePadding>
           <ListItemButton component={Link} to={route.path}>
             <ListItemIcon>
-            
-             {index.map}
+              {route.icon}
             </ListItemIcon>
             <ListItemText primary={route.label} />
           </ListItemButton>
@@ -76,6 +75,7 @@ const drawer = (
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
+          bgcolor: 'rgb(31,31,31)', 
         }}
       >
         <Toolbar>
@@ -89,7 +89,7 @@ const drawer = (
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Cajón responsive
+            Mercados
           </Typography>
         </Toolbar>
       </AppBar>
@@ -132,4 +132,4 @@ const drawer = (
   );
 }
 
-export default Inicio;
+export default Mercados;

@@ -40,7 +40,7 @@ const drawerWidth = 240;
 
 
 
-function Colonias(props) {
+function Info(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -89,7 +89,7 @@ const drawer = (
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Colonias
+            Información
           </Typography>
         </Toolbar>
       </AppBar>
@@ -132,4 +132,4 @@ const drawer = (
   );
 }
 
-export default Colonias;
+export default Info;
