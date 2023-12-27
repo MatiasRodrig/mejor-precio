@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 import Inicio from './Pages/Inicio';
 import Mercados from './Pages/Mercados';
+import Colonias from './Pages/Colonias'
 
 
 

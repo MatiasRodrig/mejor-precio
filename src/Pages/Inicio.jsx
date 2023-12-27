@@ -25,7 +25,7 @@ import InfoIcon from '@mui/icons-material/Info';
 
 
 const routes = [
-  { label: 'Inicio', path: '/', icon: <MenuIcon/> },
+  { label: 'Inicio', path: '/', icon: <AddHomeIcon/> },
   { label: 'Perfil', path: '/profile', icon: <AccessibilityNewIcon/> },
   { label: 'Mercados', path: '/mercados', icon: <AddBusinessIcon/> },
   { label: 'Colonias', path: '/colonias', icon: <GroupsIcon/> },
@@ -75,6 +75,7 @@ const drawer = (
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
+          bgcolor: 'rgb(31,31,31)', 
         }}
       >
         <Toolbar>
@@ -88,7 +89,7 @@ const drawer = (
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Cajón responsive
+            Inicio
           </Typography>
         </Toolbar>
       </AppBar>
